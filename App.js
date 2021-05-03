@@ -107,10 +107,17 @@ const App = () => {
   };
 
   return (
-    <Container style={{backgroundColor: '#6A1B4D', padding: 5}}>
+    <Container style={{backgroundColor: '#03203C', padding: 5}}>
       <Header>
         <Body>
-          <Title>TicTacToe</Title>
+          <Title
+            style={{
+              backgroundColor: '#F4BE2C',
+              color: '#000',
+              alignSelf: 'center',
+            }}>
+            Tic Tac Toe Game
+          </Title>
         </Body>
       </Header>
       <Content>
@@ -130,7 +137,7 @@ const App = () => {
         {winMessage ? (
           <View>
             <H1 style={styles.message}>{winMessage}</H1>
-            <Button onPress={reloadGame} primary block rounded>
+            <Button onPress={reloadGame} success block rounded>
               <Text>Reload The Game</Text>
             </Button>
           </View>
