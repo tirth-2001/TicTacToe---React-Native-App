@@ -107,10 +107,10 @@ const App = () => {
   };
 
   return (
-    <Container style={{backgroundColor: '#F4BE2C', padding: 5}}>
+    <Container style={{backgroundColor: '#6A1B4D', padding: 5}}>
       <Header>
         <Body>
-          <Title>LCO TicTacToe</Title>
+          <Title>TicTacToe</Title>
         </Body>
       </Header>
       <Content>
@@ -131,7 +131,7 @@ const App = () => {
           <View>
             <H1 style={styles.message}>{winMessage}</H1>
             <Button onPress={reloadGame} primary block rounded>
-              <Text>Reload Game</Text>
+              <Text>Reload The Game</Text>
             </Button>
           </View>
         ) : (
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     color: '#FFF',
     marginTop: 20,
-    backgroundColor: '#F4BE2C',
+    backgroundColor: '#6A1B4D',
     paddingVertical: 10,
     marginVertical: 10,
   },
