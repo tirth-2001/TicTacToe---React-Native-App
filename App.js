@@ -13,6 +13,8 @@ import {
   Title,
 } from 'native-base';
 
+import codePush from 'react-native-code-push';
+
 import Icons from './components/Icons';
 import Snackbar from 'react-native-snackbar';
 
@@ -105,7 +107,7 @@ const App = () => {
   };
 
   return (
-    <Container style={{backgroundColor: '333945', padding: 5}}>
+    <Container style={{backgroundColor: '#F4BE2C', padding: 5}}>
       <Header>
         <Body>
           <Title>LCO TicTacToe</Title>
@@ -140,7 +142,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default codePush(App);
 
 const styles = StyleSheet.create({
   grid: {
@@ -163,7 +165,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     color: '#FFF',
     marginTop: 20,
-    backgroundColor: '#4652B3',
+    backgroundColor: '#F4BE2C',
     paddingVertical: 10,
     marginVertical: 10,
   },
