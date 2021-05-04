@@ -2,6 +2,5 @@
     <string name="app_name">Tic Tac Toe</string>
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
-    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">xIZMk7rLwiBIq3q119cBSUmAes1C5-kU1lOM-</string>
-
+    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">7WAC0lEMAoReusQvIYJ7iUvD7tETQixAr1Wx-</string>
 </resources>

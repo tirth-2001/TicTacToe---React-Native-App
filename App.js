@@ -23,6 +23,21 @@ const itemArray = new Array(9).fill('empty');
 const App = () => {
   const [isCross, setIsCross] = useState(false);
   const [winMessage, setWinMessage] = useState('');
+  const [draw, setDraw] = useState(false);
+
+  const reloadGame = () => {
+    setIsCross(false);
+    setWinMessage('');
+    setDraw(false);
+    itemArray.fill('empty', 0, 9);
+  };
+
+  const checkDraw = () => {
+    if (!itemArray.includes('empty') && !winMessage) {
+      setDraw(true);
+      // setWinMessage("");
+    }
+  };
 
   const changeItem = itemNumber => {
     if (winMessage) {
@@ -45,14 +60,9 @@ const App = () => {
     }
 
     checkIsWinner();
+    checkDraw();
   };
 
-  const reloadGame = () => {
-    setIsCross(false);
-    setWinMessage('');
-    itemArray.fill('empty', 0, 9);
-    //
-  };
   const checkIsWinner = () => {
     //  checking  winner of the game
     if (
@@ -144,11 +154,26 @@ const App = () => {
           <View>
             <H1 style={styles.message}>{winMessage}</H1>
             <Button onPress={reloadGame} success block rounded>
-              <Text>Reload Game</Text>
+              <Text>Reload The Game</Text>
             </Button>
           </View>
         ) : (
-          <H3 style={styles.message}>{isCross ? 'Cross' : 'Circle'} turns</H3>
+          <>
+            <View>
+              {draw ? (
+                <View>
+                  <H3 style={styles.message}>Match Draw!</H3>
+                  <Button onPress={reloadGame} success block rounded>
+                    <Text>Reload The Game</Text>
+                  </Button>
+                </View>
+              ) : (
+                <H3 style={styles.message}>
+                  {isCross ? 'Cross' : 'Circle'} turns
+                </H3>
+              )}
+            </View>
+          </>
         )}
       </Content>
     </Container>
