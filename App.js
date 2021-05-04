@@ -108,7 +108,13 @@ const App = () => {
 
   return (
     <Container style={{backgroundColor: '#03203C', padding: 5}}>
-      <Header>
+      <Header
+        style={{
+          backgroundColor: '#F4BE2C',
+          color: '#000',
+          alignSelf: 'center',
+          marginVertical: 20,
+        }}>
         <Body>
           <Title
             style={{
@@ -138,7 +144,7 @@ const App = () => {
           <View>
             <H1 style={styles.message}>{winMessage}</H1>
             <Button onPress={reloadGame} success block rounded>
-              <Text>Reload The Game</Text>
+              <Text>Reload Game</Text>
             </Button>
           </View>
         ) : (
@@ -172,8 +178,10 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     color: '#FFF',
     marginTop: 20,
-    backgroundColor: '#6A1B4D',
+    backgroundColor: '#F4BE2C',
     paddingVertical: 10,
     marginVertical: 10,
+    marginHorizontal: 10,
+    borderRadius: 10,
   },
 });
